@@ -11,7 +11,11 @@ def case(banknote):
         while True:
             print(banknote)
             print(price)
-            answer = float(input())
+            answer = input()
+            if  type(answer) != str():
+                print('Have a nice day!')
+                exit()
+            answer = float(answer)
             if price + answer == banknote:
                 print('ok\n')
                 break

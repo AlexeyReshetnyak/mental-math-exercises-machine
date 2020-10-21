@@ -12,7 +12,7 @@ def case(banknote):
             print(banknote)
             print(price)
             answer = input()
-            if  type(answer) != str():
+            if  answer == '':
                 print('Have a nice day!')
                 exit()
             answer = float(answer)

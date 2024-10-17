@@ -2,6 +2,8 @@
 # coding: utf-8
 
 import random
+import os
+import time
 
 def case(banknote):
     Round = lambda x, n: float(eval('"%.' + str(int(n)) + 'f" % ' + repr(x)))
@@ -14,6 +16,8 @@ def case(banknote):
             answer = input()
             if  answer == '':
                 print('Have a nice day!')
+                time.sleep(1)
+                os.system('clear')
                 exit()
             answer = float(answer)
             if price + answer == banknote:

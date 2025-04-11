@@ -29,6 +29,32 @@ def diff(ceil_num_1, ceil_num_2):
                 break
             else:
                 print('Wrong')
+def difficult_sums():
+    Round = lambda x, n: float(eval('"%.' + str(int(n)) + 'f" % ' + repr(x)))
+    while True:
+        difficulties = [5, 7, 8]
+        flor = 0
+        ceil = len(difficulties) - 1 
+        index_1 = random.randint(flor, ceil)
+        index_2 = random.randint(flor, ceil)
+        num_1 = difficulties[index_1]
+        num_2 = difficulties[index_2]
+        while True:
+            print(num_1)
+            print('+')
+            print(num_2)
+            answer = input()
+            if  answer == '':
+                print('Have a nice day!')
+                time.sleep(1)
+                os.system('clear')
+                exit()
+            answer = float(answer)
+            if num_1 + num_2 == answer:
+                print('ok\n')
+                break
+            else:
+                print('Wrong')
 
 def sum_training(ceil_num_1, ceil_num_2):
     Round = lambda x, n: float(eval('"%.' + str(int(n)) + 'f" % ' + repr(x)))
@@ -109,7 +135,7 @@ def change_trainig():
 
 
 def main():
-    print('Select choice: 1 - change, 2 - sum, 3 - diff')
+    print('Select choice: 1 - change, 2 - sum, 3 - sum difficulties, 4 - diff')
     choice = input()
     os.system('clear')
     if int(choice) == 1:
@@ -117,6 +143,8 @@ def main():
     if int(choice) == 2:
         sum_training(100, 100) # TODO: option for choice
     if int(choice) == 3:
+        difficult_sums()
+    if int(choice) == 4:
         diff(100, 100) # TODO: option for choice
 
 if __name__ == '__main__':

@@ -5,6 +5,28 @@ import random
 import os
 import time
 
+def multiplication(ceil_num_1, ceil_num_2):
+    Round = lambda x, n: float(eval('"%.' + str(int(n)) + 'f" % ' + repr(x)))
+    while True:
+        num_1 = random.randint(0, ceil_num_1)
+        num_2 = random.randint(0, ceil_num_2)
+        while True:
+            print(num_1)
+            print('*')
+            print(num_2)
+            answer = input()
+            if  answer == '':
+                print('Have a nice day!')
+                time.sleep(1)
+                os.system('clear')
+                exit()
+            answer = float(answer)
+            if num_1 * num_2 == answer:
+                print('ok\n')
+                break
+            else:
+                print('Wrong')
+
 def diff(ceil_num_1, ceil_num_2):
     Round = lambda x, n: float(eval('"%.' + str(int(n)) + 'f" % ' + repr(x)))
     while True:
@@ -29,6 +51,7 @@ def diff(ceil_num_1, ceil_num_2):
                 break
             else:
                 print('Wrong')
+
 def difficult_sums():
     Round = lambda x, n: float(eval('"%.' + str(int(n)) + 'f" % ' + repr(x)))
     while True:
@@ -135,7 +158,8 @@ def change_trainig():
 
 
 def main():
-    print('Select choice: 1 - change, 2 - sum, 3 - sum difficulties, 4 - diff')
+    print('Select choice: 1 - change, 2 - sum, 3 - sum difficulties, 4 - diff\
+            5 - mul')
     choice = input()
     os.system('clear')
     if int(choice) == 1:
@@ -146,6 +170,8 @@ def main():
         difficult_sums()
     if int(choice) == 4:
         diff(100, 100) # TODO: option for choice
+    if int(choice) == 5:
+        multiplication(100, 10) # TODO: option for choice
 
 if __name__ == '__main__':
     main()

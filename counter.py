@@ -162,7 +162,7 @@ def main():
             5 - mul')
     choice = input()
     os.system('clear')
-        try:
+    try:
         if int(choice) == 1:
             change_trainig()
         elif int(choice) == 2:

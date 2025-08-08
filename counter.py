@@ -162,16 +162,22 @@ def main():
             5 - mul')
     choice = input()
     os.system('clear')
-    if int(choice) == 1:
-        change_trainig()
-    if int(choice) == 2:
-        sum_training(100, 100) # TODO: option for choice
-    if int(choice) == 3:
-        difficult_sums()
-    if int(choice) == 4:
-        diff(100, 100) # TODO: option for choice
-    if int(choice) == 5:
-        multiplication(100, 10) # TODO: option for choice
+        try:
+        if int(choice) == 1:
+            change_trainig()
+        elif int(choice) == 2:
+            sum_training(100, 100) # TODO: option for choice
+        elif int(choice) == 3:
+            difficult_sums()
+        elif int(choice) == 4:
+            diff(100, 100) # TODO: option for choice
+        elif int(choice) == 5:
+            multiplication(10, 100) # TODO: option for choice
+        else:
+            print("Invalid choise. Exiting.")
+            exit()
+    except ValueError:
+        print("Invalid input type. Exiting.")
 
 if __name__ == '__main__':
     main()

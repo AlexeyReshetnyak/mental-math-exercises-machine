@@ -134,28 +134,27 @@ def change_trainig():
     # 9 - 5
     # 10 -2
 
-    x = random.randint(0, 10)
+    x = random.randint(0, 9)
     if x == 0:
         case(5000)
     if x == 1:
         case(2000)
-    if x == 3:
+    if x == 2:
         case(1000)
-    if x == 4:
+    if x == 3:
         case(500)
-    if x == 5:
+    if x == 4:
         case(200)
-    if x == 6:
+    if x == 5:
         case(100)
-    if x == 7:
+    if x == 6:
         case(50)
-    if x == 8:
+    if x == 7:
         case(10)
-    if x == 9:
+    if x == 8:
         case(5)
-    if x == 10:
+    if x == 9:
         case(2)
-
 
 def main():
     print('Select choice: 1 - change, 2 - sum, 3 - sum difficulties, 4 - diff\

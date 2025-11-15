@@ -17,7 +17,6 @@ def multiplication(ceil_num_1, ceil_num_2):
             answer = input()
             if  answer == '':
                 print('Have a nice day!')
-                time.sleep(1)
                 os.system('clear')
                 exit()
             answer = float(answer)
@@ -42,7 +41,6 @@ def diff(ceil_num_1, ceil_num_2):
             answer = input()
             if  answer == '':
                 print('Have a nice day!')
-                time.sleep(1)
                 os.system('clear')
                 exit()
             answer = float(answer)
@@ -69,7 +67,6 @@ def difficult_sums():
             answer = input()
             if  answer == '':
                 print('Have a nice day!')
-                time.sleep(1)
                 os.system('clear')
                 exit()
             answer = float(answer)
@@ -85,17 +82,35 @@ def sum_training(ceil_num_1, ceil_num_2):
         num_1 = random.randint(0, ceil_num_1)
         num_2 = random.randint(0, ceil_num_2)
         while True:
-            print(num_1)
-            print('+')
-            print(num_2)
+            print("%d + %d" % (num_1, num_2))
             answer = input()
             if  answer == '':
                 print('Have a nice day!')
-                time.sleep(1)
                 os.system('clear')
                 exit()
             answer = float(answer)
             if num_1 + num_2 == answer:
+                print('ok\n')
+                time.sleep(0.5)
+                os.system('clear')
+                break
+            else:
+                print('Wrong')
+def div_():
+    while True:
+        while True:
+            num_1 = random.randrange(10, 1000000000, 10)
+            num_2 = 10
+            print(num_1)
+            print('/')
+            print(num_2)
+            answer = input()
+            if  answer == '':
+                print('Have a nice day!')
+                os.system('clear')
+                exit()
+            answer = float(answer)
+            if num_1 / num_2 == answer:
                 print('ok\n')
                 break
             else:
@@ -107,17 +122,17 @@ def case(banknote):
         price = random.uniform(0, banknote)
         price = Round(price, 2)
         while True:
-            print(banknote)
-            print(price)
+            print("%d - %.2f" % (banknote, price))
             answer = input()
             if  answer == '':
                 print('Have a nice day!')
-                time.sleep(1)
                 os.system('clear')
                 exit()
             answer = float(answer)
             if price + answer == banknote:
                 print('ok\n')
+                time.sleep(0.5)
+                os.system('clear')
                 break
             else:
                 print('Wrong')
@@ -158,7 +173,7 @@ def change_trainig():
 
 def main():
     print('Select choice: 1 - change, 2 - sum, 3 - sum difficulties, 4 - diff\
-            5 - mul')
+            5 - mul, 6 - div')
     choice = input()
     os.system('clear')
     try:
@@ -172,6 +187,8 @@ def main():
             diff(100, 100) # TODO: option for choice
         elif int(choice) == 5:
             multiplication(10, 100) # TODO: option for choice
+        elif int(choice) == 6:
+            div_()
         else:
             print("Invalid choise. Exiting.")
             exit()
